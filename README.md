@@ -5,13 +5,34 @@
 # Vue DOM Listeners
 
 Handle DOM events outside the current component without worrying about memory
-leaks.
+leaks. When the component is destroyed, the mixin will automatically remove the
+event listeners from the targets.
 
 ## Installation
 ```
 yarn add @netsells/vue-dom-listeners
 ```
 
-```javascript
+## Usage
 
+This mixin adds addEventListener and removeEventListener methods to the
+component. These take the same arguments as the standard functions, except the
+first argument should be the event target, e.g.:
+
+`document.addEventListener(...args)` -> `this.addEventListener(document, ...args)`
+
+### Example
+
+```javascript
+import DomListeners from '@netsells/vue-dom-listeners';
+
+export default {
+    mixins: [DomListeners],
+
+    mounted() {
+        this.addEventListener(document, 'click', (e) => {
+            // on clicking anywhere in document
+        });
+    },
+};
 ```
