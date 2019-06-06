@@ -15,7 +15,7 @@
   "author": "Sam Boylett <sam.boylett@netsells.co.uk>",
   "license": "ISC",
   "devDependencies": {
-    "@netsells/eslint-config": "^1.8.0",
+    "@netsells/eslint-config": "^2.3.0",
     "@vue/test-utils": "^1.0.0-beta.29",
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.3",
