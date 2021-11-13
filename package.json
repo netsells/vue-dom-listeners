@@ -1,6 +1,6 @@
 {
   "name": "@netsells/vue-dom-listeners",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Listen to events on elements outside of the current component",
   "main": "dist/index.js",
   "scripts": {
